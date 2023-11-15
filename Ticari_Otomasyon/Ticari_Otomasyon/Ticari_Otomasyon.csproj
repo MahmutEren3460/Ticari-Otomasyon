@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props" Condition="Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B38CBA23-FD63-4131-90CD-F4B65B54D448}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Ticari_Otomasyon</RootNamespace>
+    <AssemblyName>Ticari_Otomasyon</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.1.UI, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Extensions, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.UI, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1.Extensions, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="baglanti.cs" />
+    <Compile Include="Dbo_Ticari_OtomasyonDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dbo_Ticari_OtomasyonDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dbo_Ticari_OtomasyonDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dbo_Ticari_OtomasyonDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dbo_Ticari_OtomasyonDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dbo_Ticari_OtomasyonDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dbo_Ticari_OtomasyonDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dbo_Ticari_OtomasyonDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dbo_Ticari_OtomasyonDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dbo_Ticari_OtomasyonDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dbo_Ticari_OtomasyonDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dbo_Ticari_OtomasyonDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAna.Designer.cs">
+      <DependentUpon>FormAna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAnaSayfa.Designer.cs">
+      <DependentUpon>FormAnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAyarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAyarlar.Designer.cs">
+      <DependentUpon>FormAyarlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBankalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBankalar.Designer.cs">
+      <DependentUpon>FormBankalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFaturalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFaturalar.Designer.cs">
+      <DependentUpon>FormFaturalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFaturaUrunDuzenleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFaturaUrunDuzenleme.Designer.cs">
+      <DependentUpon>FormFaturaUrunDuzenleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFaturaUrunler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFaturaUrunler.Designer.cs">
+      <DependentUpon>FormFaturaUrunler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFirmalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFirmalar.Designer.cs">
+      <DependentUpon>FormFirmalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiderler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiderler.Designer.cs">
+      <DependentUpon>FormGiderler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHareket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHareket.Designer.cs">
+      <DependentUpon>FormHareket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKasa.Designer.cs">
+      <DependentUpon>FormKasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMail.Designer.cs">
+      <DependentUpon>FormMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMusteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMusteri.Designer.cs">
+      <DependentUpon>FormMusteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNotDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNotDetay.Designer.cs">
+      <DependentUpon>FormNotDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNotlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNotlar.Designer.cs">
+      <DependentUpon>FormNotlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPersonel.Designer.cs">
+      <DependentUpon>FormPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRaporlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRaporlar.Designer.cs">
+      <DependentUpon>FormRaporlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRehber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRehber.Designer.cs">
+      <DependentUpon>FormRehber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStok.Designer.cs">
+      <DependentUpon>FormStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStokDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStokDetay.Designer.cs">
+      <DependentUpon>FormStokDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUrun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUrun.Designer.cs">
+      <DependentUpon>FormUrun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAna.resx">
+      <DependentUpon>FormAna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAnaSayfa.resx">
+      <DependentUpon>FormAnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAyarlar.resx">
+      <DependentUpon>FormAyarlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBankalar.resx">
+      <DependentUpon>FormBankalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFaturalar.resx">
+      <DependentUpon>FormFaturalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFaturaUrunDuzenleme.resx">
+      <DependentUpon>FormFaturaUrunDuzenleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFaturaUrunler.resx">
+      <DependentUpon>FormFaturaUrunler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFirmalar.resx">
+      <DependentUpon>FormFirmalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiderler.resx">
+      <DependentUpon>FormGiderler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHareket.resx">
+      <DependentUpon>FormHareket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKasa.resx">
+      <DependentUpon>FormKasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMail.resx">
+      <DependentUpon>FormMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMusteri.resx">
+      <DependentUpon>FormMusteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNotDetay.resx">
+      <DependentUpon>FormNotDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNotlar.resx">
+      <DependentUpon>FormNotlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPersonel.resx">
+      <DependentUpon>FormPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRaporlar.resx">
+      <DependentUpon>FormRaporlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRehber.resx">
+      <DependentUpon>FormRehber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStok.resx">
+      <DependentUpon>FormStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStokDetay.resx">
+      <DependentUpon>FormStokDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUrun.resx">
+      <DependentUpon>FormUrun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <None Include="Dbo_Ticari_OtomasyonDataSet.xsc">
+      <DependentUpon>Dbo_Ticari_OtomasyonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dbo_Ticari_OtomasyonDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dbo_Ticari_OtomasyonDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dbo_Ticari_OtomasyonDataSet.xss">
+      <DependentUpon>Dbo_Ticari_OtomasyonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dbo_Ticari_OtomasyonDataSet1.xsc">
+      <DependentUpon>Dbo_Ticari_OtomasyonDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Dbo_Ticari_OtomasyonDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dbo_Ticari_OtomasyonDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dbo_Ticari_OtomasyonDataSet1.xss">
+      <DependentUpon>Dbo_Ticari_OtomasyonDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Dbo_Ticari_OtomasyonDataSet2.xsc">
+      <DependentUpon>Dbo_Ticari_OtomasyonDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Dbo_Ticari_OtomasyonDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dbo_Ticari_OtomasyonDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dbo_Ticari_OtomasyonDataSet2.xss">
+      <DependentUpon>Dbo_Ticari_OtomasyonDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Dbo_Ticari_OtomasyonDataSet3.xsc">
+      <DependentUpon>Dbo_Ticari_OtomasyonDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Dbo_Ticari_OtomasyonDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dbo_Ticari_OtomasyonDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dbo_Ticari_OtomasyonDataSet3.xss">
+      <DependentUpon>Dbo_Ticari_OtomasyonDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Dbo_Ticari_OtomasyonDataSet4.xsc">
+      <DependentUpon>Dbo_Ticari_OtomasyonDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Dbo_Ticari_OtomasyonDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dbo_Ticari_OtomasyonDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dbo_Ticari_OtomasyonDataSet4.xss">
+      <DependentUpon>Dbo_Ticari_OtomasyonDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Dbo_Ticari_OtomasyonDataSet5.xsc">
+      <DependentUpon>Dbo_Ticari_OtomasyonDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Dbo_Ticari_OtomasyonDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dbo_Ticari_OtomasyonDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dbo_Ticari_OtomasyonDataSet5.xss">
+      <DependentUpon>Dbo_Ticari_OtomasyonDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props'))" />
+  </Target>
+</Project>
